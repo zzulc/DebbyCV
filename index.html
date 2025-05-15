@@ -157,6 +157,9 @@
 
 <h2>Published Papers </h2>
 <h3>Journal Papers</h3>
+<style>
+  #journal td {text-align: justify;}
+</style>  
 <table id="journal" width="100%">
   <tbody>
     <tr><td>(2024) Junping Xie, Jing Yang, Jinhai Li, and Debby D. Wang. "An efficient method of renewing object-induced three-way concept lattices involving decreasing attribute-granularity levels." International Journal of Approximate Reasoning, 164: 109083.</td></tr>
@@ -212,7 +215,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <h4>Conference Papers</h4>
-<table id="Conf." width="100%">
+<style>
+  #Conf td {text-align: justify;}
+</style>
+<table id="Conf" width="100%">
 	<tbody>
     <tr><td>(2025) Yujie Chen, Wenhui Wu, Le Ou-Yang, Ran Wang, and Debby D. Wang. "GeCC: Generalized Contrastive Clustering with Domain Shifts Modeling." Proceedings of the AAAI Conference on Artificial Intelligence, 15966-15974. </td></tr>
     <tr><td>(2024) Weiqing Guo, Tianlun Zhang, Dunlu Peng, and Debby D. Wang. "Model Uncertainty Estimation Based on a Dual-Module Neural Network Architecture." 2024 International Conference on Machine Learning and Cybernetics (ICMLC), 225-231.</td></tr>
@@ -230,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const rows = document.querySelectorAll('#Conf. tbody tr');
+  const rows = document.querySelectorAll('#Conf tbody tr');
   rows.forEach((row, index) => {
     const td = row.querySelector('td');
     td.innerHTML = `[${index + 1}] ` + td.innerHTML;
@@ -239,6 +245,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <h4>Books Papers</h4>
+<style>
+  #books td {text-align: justify;}
+</style>
 <table id="books" width="100%">
 	<tbody>
     <tr><td>(2016) Debby D. Wang, Lichun Ma, and Hong Yan. "Computational Characterization of Non-small-cell Lung Cancer with EGFR Gene Mutations and its Applications to Drug Resistance Prediction." CRC Press, 233-256.</td></tr>
@@ -313,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <tr>
       <td style="width: 50%; padding: 10px; vertical-align: top;">
         <div style="text-align: center;">
-          <img src="./pic/RongjiKe.jpg" width="200" height="120" style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px;">
+          <img src="./pic/RongjiKe.jpg" width="200" height="160" style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px;">
           <strong>Rongji Ke</strong><br>
           Research Assistant<br>
           Research Interest: Image inpainting, Virtual Screening
@@ -322,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <td style="width: 50%; padding: 10px; vertical-align: top;">
         <div style="text-align: center;">
-          <img src="./pic/RongjiKe.jpg" width="200" height="120" style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px;">
+          <img src="./pic/RongjiKe.jpg" width="200" height="160" style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px;">
           <strong>Rongji Ke</strong><br>
           Research Assistant<br>
           Research Interest: Image inpainting, Virtual Screening
