@@ -321,21 +321,25 @@ document.addEventListener('DOMContentLoaded', function() {
   <tbody>
     <tr>
       <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="text-align: center;">
-          <img src="./pic/RongjiKe.jpg" width="180" height="200" style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          <strong>Rongji Ke</strong><br>
-          Research Assistant<br>
-          Research Interest: Image inpainting, Virtual Screening
+        <div style="display: flex; gap: 15px; align-items: flex-start;">
+          <!-- 图片容器 -->
+          <div style="flex-shrink: 0;">
+            <img src="./pic/RongjiKe.jpg" width="180" height="200" 
+                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
+          </div>
+          
+          <!-- 文字容器 -->
+          <div style="flex-grow: 1; text-align: justify; word-wrap: break-word; word-break: normal;">
+            <strong>Rongji Ke</strong><br>
+            Research Assistant<br>
+            Research Interest: Image inpainting, Virtual Screening, 
+            Deep Learning Applications, Computational Biology, 
+            Medical Image Analysis, Computer Vision, 
+            Data Mining and Knowledge Discovery
+          </div>
         </div>
       </td>
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="text-align: center;">
-          <img src="./pic/RongjiKe.jpg" width="180" height="200" style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          <strong>Rongji Ke</strong><br>
-          Research Assistant<br>
-          Research Interest: Image inpainting, Virtual Screening
-        </div>
-      </td>
+      <!-- 重复结构可继续添加其他成员 -->
     </tr>
   </tbody>
 </table>
