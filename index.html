@@ -283,8 +283,35 @@
   <div class="container">
     <h2>Research Works</h2>
 
-    <img src="./pic/AIforBS.jpg" alt="AI for Biochemical Sciences" style="max-width: 98%; height: auto; border-radius: 16px; display: block; margin: 20px auto 20px auto;">
+    <!-- 顶部图片 + 留言表单 -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin: 20px 0;">
+    <!-- 图片区域 -->
+      <div style="flex: 1 1 60%;">
+        <img src="./pic/AIforBS.jpg" alt="AI for Biochemical Sciences"
+             style="max-width: 100%; height: auto; border-radius: 16px; display: block;">
+      </div>
 
+      <!-- 留言区域 -->
+      <div style="flex: 1 1 35%; border: 1px solid #ccc; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="margin-top: 0;">Leave a Message</h3>
+        <form action="mailto:your_email@example.com" method="POST" enctype="text/plain">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" style="width: 100%; padding: 8px; margin-bottom: 12px;" required><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" style="width: 100%; padding: 8px; margin-bottom: 12px;" required><br>
+
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="5" style="width: 100%; padding: 8px; margin-bottom: 12px;" required></textarea><br>
+
+          <button type="submit" style="padding: 10px 16px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 内容卡片区域 -->
     <div class="grid-container">
       <!-- Card 1 -->
       <div class="card">
@@ -302,11 +329,11 @@
       <!-- Card 2 -->
       <div class="card">
         <h3>Molecular Toxicity Prediction</h3>
-        <div style="display: flex; gap: 20px; margin-top: 10px;">
+          <div style="display: flex; gap: 20px; margin-top: 10px;">
           <div style="flex: 70;">
             <img src="./pic/AIforBS2.png" alt="Molecular Toxicity" style="width: 100%; border-radius: 12px;">
           </div>
-          <div style="flex: 30;">
+          <div style="flex: 30%;">
             <p>
               <strong>Publication:</strong> HUANG, YUTING, DUNLU PENG, and DEBBY D. WANG. 
               "Learning of Molecular Graphs in Toxicity Prediction." 
@@ -320,8 +347,8 @@
 
       <!-- Card 3 -->
       <div class="card">
-        <h3>Binding Affinity Prediction</h3>
-        <img src="./pic/AIforBS3.png" alt="Binding Affinity 2">
+          <h3>Binding Affinity Prediction</h3>
+          <img src="./pic/AIforBS3.png" alt="Binding Affinity 2">
         <p>
           <strong>Publication:</strong> Wang, Debby D., Wenhui Wu, and Ran Wang. 
           "Structure-based, deep-learning models for protein-ligand binding affinity prediction." 
@@ -345,59 +372,6 @@
       </div>
     </div>
 
-    <div style="height: 30px;"></div>
-
-    <img src="./pic/NLC.jpg" alt="Non-small-cell Lung Cancer-oriented Computational Studies" style="max-width: 98%; height: auto; border-radius: 16px; display: block; margin: 20px auto 20px auto;">
-
-    <div class="grid-container">
-      <!-- Card 1 -->
-      <div class="card">
-        <h3>Molecular Dynamics Simulation and Analysis</h3>
-        <img src="./pic/NLC1.png" alt="Molecular Dynamics Simulation">
-        <p>
-          <strong>Publication:</strong> Zhu, Mengxu, Debby D. Wang, and Hong Yan. 
-          "Genotype-determined EGFR-RTK heterodimerization and its effects on drug resistance in lung cancer treatment revealed by molecular dynamics simulations." 
-          <em>BMC Molecular and Cell Biology</em> 22, no. 1 (2021): 34.<br>
-          <strong>Dataset:</strong> Private hospital data (Queen Mary Hospital in HK)
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <h3>Mutation-induced Drug Resistance Analysis</h3>
-        <img src="./pic/NLC4.png" alt="Mutation-induced Resistance">
-        <p>
-          <strong>Publication:</strong> Wang, Debby D., Weiqiang Zhou, Hong Yan, Maria Wong, and Victor Lee. 
-          "Personalized prediction of EGFR mutation-induced drug resistance in lung cancer." 
-          <em>Scientific Reports</em> 3, no. 1 (2013): 2855.<br>
-          <strong>Dataset:</strong> Private hospital data (Queen Mary Hospital in HK)
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <h3>Drug Response Analysis and Mechanism Exploration</h3>
-        <img src="./pic/NLC2.png" alt="Drug Response Analysis">
-        <p>
-          <strong>Publication:</strong> Wang, Debby D., Victor HF Lee, Guanyu Zhu, Bin Zou, Lichun Ma, and Hong Yan. 
-          "Selectivity profile of afatinib for EGFR-mutated non-small-cell lung cancer." 
-          <em>Molecular BioSystems</em> 12, no. 5 (2016): 1552-1563.<br>
-          <strong>Dataset:</strong> Private hospital data (Queen Mary Hospital in HK)
-        </p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="card">
-        <h3>EGFR Signaling Pathway Analysis</h3>
-        <img src="./pic/NLC3.png" alt="EGFR Signaling">
-        <p>
-          <strong>Publication:</strong> Wang, Debby D., Lichun Ma, Maria P. Wong, Victor HF Lee, and Hong Yan. 
-          "Contribution of EGFR and ErbB-3 heterodimerization to the EGFR mutation–induced gefitinib- and erlotinib-resistance in non-small-cell lung carcinoma treatments." 
-          <em>PLOS ONE</em> 10, no. 5 (2015): e0128360.<br>
-          <strong>Dataset:</strong> Private hospital data (Queen Mary Hospital in HK)
-        </p>
-      </div>
-    </div>
 
     <div style="height: 30px;"></div>
 
