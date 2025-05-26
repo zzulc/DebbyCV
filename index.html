@@ -432,18 +432,35 @@
 
   <img src="./pic/contact.png" alt="Contact Banner" style="max-width: 98%; height: auto; border-radius: 16px; display: block; margin: 20px auto 20px auto;">
 
-  <form action="https://formsubmit.co/zzulchao@163.com" method="POST" class="contact-form">
-    <label>Name:
-      <input type="text" name="name" required>
+  <form id="myForm" action="https://formsubmit.co/zzulchao@163.com" method="POST" class="contact-form">
+    <label>
+      Your Name:<br>
+      <input type="text" id="name" name="name" required>
     </label>
-    <label>Email:
-      <input type="email" name="email" required>
+    <br>
+    <label>
+      Message:<br>
+      <textarea id="msg" rows="5" required></textarea>
     </label>
-    <label>Message:
-      <textarea name="message" rows="5" required></textarea>
-    </label>
+    <br>
+    <!-- 用隐藏域提交合并后的内容 -->
+    <input type="hidden" name="message" id="combinedMessage">
     <button type="submit">Send</button>
   </form>
+
+  <script>
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function(e) {
+      const name = document.getElementById('name').value.trim();
+      const msg = document.getElementById('msg').value.trim();
+      // 合并成两行文本
+      document.getElementById('combinedMessage').value = `${name}\n${msg}`;
+      // 禁用name和msg两个字段不提交（可选）
+      document.getElementById('name').disabled = true;
+      document.getElementById('msg').disabled = true;
+    });
+  </script>
+
  </div>
 </body>
 </html>
