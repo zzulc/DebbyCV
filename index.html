@@ -433,35 +433,64 @@
 </html>
 
 
+<style>
+  .people-container {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .person-cell {
+    width: 50%;
+    padding: 10px;
+    vertical-align: top;
+  }
+
+  .person-box {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .person-photo {
+    width: 180px;
+    height: 200px;
+    box-shadow: 4px 4px 8px #888;
+    margin-bottom: 10px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .person-info {
+    flex-grow: 1;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: normal;
+  }
+
+  .person-info strong {
+    font-size: 1.1em;
+  }
+</style>
+
 
 <h2>Peoples</h2>
-<table id="tbPublications" width="100%" style="border-collapse: collapse;">
+<table class="people-container">
   <tbody>
-    <!-- 第一排 -->
     <tr>
-      <!-- 第一个人 -->
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="display: flex; gap: 15px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <img src="./pic/win_nie.jpg" width="180" height="200" 
-                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          </div>
-          <div style="flex-grow: 1; text-align: left; word-wrap: break-word; word-break: normal;">
+      <td class="person-cell">
+        <div class="person-box">
+          <img src="./pic/win_nie.jpg" class="person-photo">
+          <div class="person-info">
             <strong>Weiqing Guo (Winnie)</strong><br>
             Assistant Lecturer<br>
             Research Interest: Molecular representation oriented machine learning
           </div>
         </div>
       </td>
-
-      <!-- 第二个人 -->
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="display: flex; gap: 15px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <img src="./pic/RongjiKe.jpg" width="180" height="200" 
-                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          </div>
-          <div style="flex-grow: 1; text-align: left; word-wrap: break-word; word-break: normal;">
+      <td class="person-cell">
+        <div class="person-box">
+          <img src="./pic/RongjiKe.jpg" class="person-photo">
+          <div class="person-info">
             <strong>Rongji Ke</strong><br>
             Research Assistant<br>
             Research Interest: Image inpainting, Virtual Screening
@@ -470,31 +499,21 @@
       </td>
     </tr>
 
-    <!-- 第二排 -->
     <tr>
-      <!-- 第三个人 -->
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="display: flex; gap: 15px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <img src="./pic/yuting.jpg" width="180" height="200" 
-                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          </div>
-          <div style="flex-grow: 1; text-align: left; word-wrap: break-word; word-break: normal;">
+      <td class="person-cell">
+        <div class="person-box">
+          <img src="./pic/yuting.jpg" class="person-photo">
+          <div class="person-info">
             <strong>Yuting Huang (Yumi)</strong><br>
             Research Assistant<br>
             Research Interest: Toxicity prediction of drug molecules
           </div>
         </div>
       </td>
-
-      <!-- 第四个人 -->
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="display: flex; gap: 15px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <img src="./pic/lc.jpg" width="180" height="200" 
-                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          </div>
-          <div style="flex-grow: 1; text-align: left; word-wrap: break-word; word-break: normal;">
+      <td class="person-cell">
+        <div class="person-box">
+          <img src="./pic/lc.jpg" class="person-photo">
+          <div class="person-info">
             <strong>Chao Liu</strong><br>
             Research Assistant<br>
             Research Interest: Knowledge graph embedding, Uncertainty modeling
@@ -502,83 +521,64 @@
         </div>
       </td>
     </tr>
-	
-	<!-- 第三排 -->
+
     <tr>
-      <!-- 第六个人 -->
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="display: flex; gap: 15px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <img src="./pic/Ammar.jpg" width="180" height="200" 
-                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          </div>
-          <div style="flex-grow: 1; text-align: left; word-wrap: break-word; word-break: normal;">
-            <strong>Muhammad Ammar khawer</strong><br>
+      <td class="person-cell">
+        <div class="person-box">
+          <img src="./pic/Ammar.jpg" class="person-photo">
+          <div class="person-info">
+            <strong>Muhammad Ammar Khawer</strong><br>
             Research Assistant<br>
-            Research Interest: Uncertainity Quantification , Semisupervised learning, Generative Ai, Drug Discovery, Medical Imaging, Knowledge Distillation 
+            Research Interest: Uncertainty Quantification, Semi-supervised Learning, Generative AI, Drug Discovery, Medical Imaging, Knowledge Distillation
           </div>
         </div>
       </td>
-
-      <!-- 第五个人 -->
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="display: flex; gap: 15px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <img src="./pic/YTZ.jpg" width="180" height="200" 
-                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          </div>
-          <div style="flex-grow: 1; text-align: left; word-wrap: break-word; word-break: normal;">
-            <strong>Tingzhang Yang </strong><br>
-            Undergraduate​<br>
+      <td class="person-cell">
+        <div class="person-box">
+          <img src="./pic/YTZ.jpg" class="person-photo">
+          <div class="person-info">
+            <strong>Tingzhang Yang</strong><br>
+            Undergraduate<br>
             Major: Data Science & AI
           </div>
         </div>
       </td>
+    </tr>
 
-	
-	<!-- 第四排 -->
     <tr>
-      <!-- 第七个人 -->
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="display: flex; gap: 15px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <img src="./pic/JTH.jpg" width="180" height="200" 
-                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          </div>
-          <div style="flex-grow: 1; text-align: left; word-wrap: break-word; word-break: normal;">
+      <td class="person-cell">
+        <div class="person-box">
+          <img src="./pic/JTH.jpg" class="person-photo">
+          <div class="person-info">
             <strong>Tianhang Jiang</strong><br>
             Undergraduate<br>
             Major: Electronics and Computer Engineering
           </div>
         </div>
       </td>
-      
+      <td class="person-cell"></td> <!-- 占位符保持对齐 -->
+    </tr>
   </tbody>
 </table>
 
-<h3>Past memeber</h3>
-<table id="tbPublications" width="100%" style="border-collapse: collapse;">
+<h3>Past Members</h3>
+<table class="people-container">
   <tbody>
-    </table>
-    <!-- 第五排 -->
     <tr>
-      <td style="width: 50%; padding: 10px; vertical-align: top;">
-        <div style="display: flex; gap: 15px; align-items: flex-start;">
-          <div style="flex-shrink: 0;">
-            <img src="./pic/lq.jpg" width="180" height="200" 
-                 style="box-shadow: 4px 4px 8px #888; margin-bottom: 10px; display: block;">
-          </div>
-          <div style="flex-grow: 1; text-align: left; word-wrap: break-word; word-break: normal;">
+      <td class="person-cell">
+        <div class="person-box">
+          <img src="./pic/lq.jpg" class="person-photo">
+          <div class="person-info">
             <strong>Qiang Liu</strong><br>
             Research Assistant<br>
             Research Interest: Time series prediction, Uncertainty modeling
           </div>
         </div>
       </td>
+      <td class="person-cell"></td> <!-- 保持结构对齐 -->
     </tr>
   </tbody>
 </table>
-
 
   
 <div id="footer">
