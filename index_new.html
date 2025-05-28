@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<link rel="shortcut icon" href="myIcon.ico">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<meta name="keywords" content="Wang Dan Debby, Wang Dan, Debby Dan Wang, Debby, Hong Kong Metropolitan University, 王丹, 香港都会大学"> 
+<meta name="description" content="Debby Dan Wang's home page">
+<meta name="google-site-verification" content="yy_3iiS_X6pJdegdwitJMrH0LRLHXwpjrV9RKLXxKjg" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css">
+<title>Wang Dan Debby</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87320911-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<nav class="navbar">
+  <a href="index_new.html" class="nav-link">🏠Home</a>
+  <a href="experience.html" class="nav-link">👩‍🎓Experience</a>
+  <a href="research.html" class="nav-link">🔬Research Works</a>
+  <a href="members.html" class="nav-link">🧑‍🤝‍🧑Members</a>
+  <a href="contact.html" class="nav-link">📮Contact us</a>
+</nav>
+
+<style>
+	.scroll-container {
+	  width: 940px; /* 容器宽度 */
+	  height: 170px; /* 容器高度 */
+	  overflow: auto; /* 当内容超出容器时显示滚动条 */
+	  border: 1px solid #ccc; /* 容器边框 */
+	  padding: 10px; /* 内边距 */
+	}
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #d0eaff, #e8f4ff); /* 浅蓝渐变背景 */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #c0e0ff;
+  }
+
+  .navbar .nav-link {
+    color: #005a9e;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    background-color: #b3dbff;
+    color: #003c6d;
+  }
+  body {
+    padding-top: 100px; /* 避免内容被导航栏遮挡 */
+    /* margin: 0; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4faff; 
+    color: #333;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* 布告栏 */
+  .announcement-bar {
+      display: flex;
+      align-items: center;
+      background-color: #fff8dc;
+      border: 2px dashed #ffd966;
+      border-radius: 16px;
+      padding: 20px 30px;
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 960px;
+      width: 90%;
+      position: relative;
+    }
+
+    .announcement-bar::before {
+      content: '📢';
+      font-size: 36px;
+      margin-right: 20px;
+      animation: wiggle 1.6s infinite;
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      50% { transform: rotate(10deg); }
+      75% { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .announcement-text {
+      font-size: 18px;
+      color: #5a4628;
+      line-height: 1.5;
+    }
+
+    .tape {
+      position: absolute;
+      width: 60px;
+      height: 20px;
+      background: rgba(255,255,255,0.6);
+      border: 1px dashed #bbb;
+      transform: rotate(-6deg);
+      top: -10px;
+      left: 30%;
+      z-index: 2;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+
+
+
+  /* 箭头 */
+  #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(to bottom right, #7ec8e3, #a0d8ef);
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    #backToTop svg {
+      transition: transform 0.4s ease;
+    }
+
+    #backToTop:hover {
+      background: linear-gradient(to bottom right, #55b0d9, #8ccfee);
+    }
+
+    #backToTop:hover svg {
+      transform: rotate(360deg);
+    }
+  
+  .footer {
+      text-align: center;
+    }
+</style>
+
+
+
+<body>
+
+ <a href="https://github.com/CV-DanWang" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<table>
+	<tbody>
+		<tr>
+			<td width="670">
+				<div id="toptitle">					
+					<h1>Wang Dan Debby (王丹)</h1> 
+				</div>
+
+				<p>
+					Assistant Professor<br>
+					School of Science and Technology,<br>
+					Hong Kong Metropolitan University,<br>
+					Room D1117, Jockey Club Campus, Ho Man Tin, Hong Kong.<br>
+					<br>
+					Email: dwang@hkmu.edu.hk<br>
+					<!-- <br>
+					<font color="red">I am seeking highly self-motivated Ph.D. and MPhil students to work on Structural Bioinformatics and AI for Science. Interested applicants may email me their CV.</font> 	        -->
+				</p>
+
+				<p> 
+					<a href="https://scholar.google.com.hk/citations?hl=en&user=c_Fwfw0AAAAJ", target="_blank"><img src="./pic/google_scholar.png" height="30px" style="margin-bottom:-3px"></a>
+					&nbsp;<a href="https://orcid.org/0000-0002-3755-8943", target="_blank"><img src="./pic/ORCID_iD.png" height="30px" style="margin-bottom:-3px"></a>
+				</p><br>
+			</td>
+			<td>
+				<img src="./pic/DDW.jpeg" border="0" width="200"><br>
+			</td>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+<div class="announcement-bar">
+    <div class="tape"></div>
+    <div class="announcement-text">
+      😊 I am seeking highly self-motivated Ph.D. and MPhil students to work on Structural Bioinformatics and AI for Science. Interested applicants may email me their CV.
+    </div>
+  </div>
+
+
+<h2>Biography</h2>
+<div style="text-align: justify; text-justify: inter-word;">
+    <p>Dr. Wang received her Ph.D. degree from the Department of Electronic Engineering at City University of Hong Kong in 2014. Later, she held research positions at the City University of Hong Kong (Postdoctoral Fellow, 2015–2016; Research Fellow, 2019–2020), the Caritas Institute of Higher Education (Research Fellow, 2016–2017), the National University of Singapore (Research Fellow, 2017–2018), and the University of Shanghai for Science and Technology (Assistant Professor, 2020–2022). Currently, she serves as an Assistant Professor in the School of Science and Technology at Hong Kong Metropolitan University.</p>
+    <p>Dr. Wang's research focuses on <strong>structural bioinformatics</strong> and <strong>AI for Science</strong>, with specific expertise in the following areas:</p>
+    <ol style="text-align: justify;">
+        <li><strong>Designing structure-based scoring models</strong> for protein-ligand binding affinity prediction (BAP) in computer-aided drug design;</li>
+        <li><strong>Target-specific BAP and drug-efficacy analysis</strong> in non-small cell lung cancer (NSCLC) studies;</li>
+        <li><strong>Molecular dynamics simulation and analysis</strong> in biomedical sciences;</li>
+        <li><strong>Molecular representation modeling</strong> and tool development;</li>
+        <li><strong>Molecular property prediction</strong> using AI and deep learning.</li>
+    </ol>
+</div>
+
+
+<h2>News</h2>
+<div class="scroll-container">
+<table style="border-spacing:2px">
+	<tbody>
+		<tr><td>🔈<a href="https://www.csbj.org/advancedcomputationaltools" target="_blank">Share your contributions to our newly organized Special Issue in Computational and Structural Biotechnology Journal!</a></td></tr>
+		<tr><td>🎉<a href="https://link.springer.com/collections/beeegfcgca" target="_blank">Our Special Issue was successfully published in International Journal of Machine Learning and Cybernetics!</a></td></tr>
+		<tr><td>🎉<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013074" target="_blank">Our new journal paper 'Scoring protein-ligand binding structures through learning atomic graphs with inter-molecular adjacency' (accepted by PLOS Computational Biology) is online now!</a></td></tr>
+		<tr><td>🎉<a href="https://ojs.aaai.org/index.php/AAAI/article/view/33753" target="_blank">Our new conference paper 'GeCC: Generalized Contrastive Clustering with Domain Shifts Modeling' (accepted by AAAI) is online now!</a></td></tr>
+		<tr><td>🎉<a href="https://ieeexplore.ieee.org/abstract/document/10935232" target="_blank">Our new conference paper 'Learning of Molecular Graphs in Toxicity Prediction' (accepted by IEEE ICMLC) is online now!</a></td></tr>
+		<tr><td>🧑‍🤝‍🧑 A new research assistant has joined our group!</td></tr>
+		<tr><td>🧑‍🤝‍🧑 Four new undergraduate researchers will join our group very soon!</td></tr>
+	</tbody>
+</table>
+</div>
+
+<div id="footer" class="footer">
+	&copy; Debby Dan Wang | Last updated: 2025-05
+</div> 
+
+<button id="backToTop" title="回到顶部" aria-label="返回顶部">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M12 4L6 10H10V20H14V10H18L12 4Z" fill="white"/>
+    </svg>
+  </button>
+
+</body>
+
+<script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.style.display = "flex";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</html>
