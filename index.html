@@ -430,27 +430,30 @@
     </div>
   </div>
 
-  <img src="./pic/contact.png" alt="Contact Banner" style="max-width: 98%; height: auto; border-radius: 16px; display: block; margin: 20px auto 20px auto;">
-  <head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>联系表单</title>
     <style>
         .form-container {
-            max-width: 600px;
+            max-width: 95%; /* 与图片宽度一致 */
             margin: 20px auto;
             padding: 20px;
             border: 1px solid #ccc;
+            box-sizing: border-box; /* 防止溢出 */
         }
 
         .first-row {
             display: flex;
-            gap: 15px;
+            gap: 30px; /* 增大间隙 */
             margin-bottom: 15px;
         }
 
         .input-group {
             flex: 1;
+            min-width: 0; /* 防止内容溢出 */
         }
 
         input, textarea {
@@ -458,6 +461,7 @@
             padding: 8px;
             margin-top: 5px;
             border: 1px solid #ddd;
+            box-sizing: border-box;
         }
 
         textarea {
@@ -477,37 +481,39 @@
         @media (max-width: 600px) {
             .first-row {
                 flex-direction: column;
+                gap: 15px; /* 移动端适当减少间隙 */
             }
         }
     </style>
-  </head>
-  <body>
-      <div class="form-container">
+</head>
+<body>
+    <img src="./pic/contact.png" alt="Contact Banner" style="max-width: 98%; height: auto; border-radius: 16px; display: block; margin: 20px auto;">
+    
+    <div class="form-container">
         <form action="https://formspree.io/f/manoroar" method="POST">
-          <div class="first-row">
-            <div class="input-group">
-              <label>Name:</label>
-              <input type="text" name="name" required>
+            <div class="first-row">
+                <div class="input-group">
+                    <label>Name:</label>
+                    <input type="text" name="Name" required>
+                </div>
+                <div class="input-group">
+                    <label>Institution:</label>
+                    <input type="text" name="Institution" required>
+                </div>
+                <div class="input-group">
+                    <label>Email:</label>
+                    <input type="email" name="Email" required>
+                </div>
             </div>
-          <div class="input-group">
-            <label>Institution:</label>
-            <input type="text" name="company" required>
-          </div>
-          <div class="input-group">
-            <label>Email:</label>
-            <input type="email" name="email" required>
-          </div>
-      </div>
-  
-      <div class="input-group">
-        <label>Message:</label>
-        <textarea name="message" required></textarea>
-      </div>
-  
-      <button type="submit">Submit</button>
-    </form>
+
+            <div class="input-group">
+                <label>Message:</label>
+                <textarea name="Message" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
- </div>
 </body>
 </html>
 
