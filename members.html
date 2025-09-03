@@ -9,7 +9,7 @@
 <meta name="description" content="Debby Dan Wang's home page">
 <meta name="google-site-verification" content="yy_3iiS_X6pJdegdwitJMrH0LRLHXwpjrV9RKLXxKjg" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css">
-<title>personal experience</title>
+<title>Members</title>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,144 +19,141 @@
   ga('create', 'UA-87320911-1', 'auto');
   ga('send', 'pageview');
 </script>
+
 <style>
-	.scroll-container {
-	  width: 940px; /* 容器宽度 */
-	  height: 170px; /* 容器高度 */
-	  overflow: auto; /* 当内容超出容器时显示滚动条 */
-	  border: 1px solid #ccc; /* 容器边框 */
-	  padding: 10px; /* 内边距 */
-	}
-    .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to right, #d0eaff, #e8f4ff); /* 浅蓝渐变背景 */
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 15px 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-bottom: 1px solid #c0e0ff;
-  }
-
-  .navbar .nav-link {
-    color: #005a9e;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .navbar .nav-link:hover,
-  .navbar .nav-link.active {
-    background-color: #b3dbff;
-    color: #003c6d;
-  }
-
-  body {
-    padding-top: 70px; /* 避免内容被导航栏遮挡 */
-    /* margin: 0; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4faff;
-    color: #333;
-  }
-
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-  
-  .footer {
-      text-align: center;
-    }
-
-.people-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 每行3列 */
-  gap: 20px; /* 每个单元格之间的间距 */
-  margin-top: 20px;
+/* 导航栏 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #d0eaff, #e8f4ff);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #c0e0ff;
 }
 
+.navbar .nav-link {
+  color: #005a9e;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  .person-cell {
-    width: 50%;
-    padding: 10px;
-    vertical-align: top;
-  }
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  background-color: #b3dbff;
+  color: #003c6d;
+}
 
-.person-box {
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-  padding: 10px;
+/* 页面主体 */
+body {
+  padding-top: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4faff;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h2, h3 {
+  text-align: left;
+  color: #005a9e;
+}
+
+/* 人员网格布局 */
+.people-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.person-cell {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
 }
 
-  .person-photo {
-    width: 130px;
-    height: 170px;
-    /* width: 180px;
-    height: 200px; */
-    box-shadow: 4px 4px 8px #888;
-    margin-bottom: 10px;
-    display: block;
-    object-fit: cover;
-  }
+.person-photo {
+  width: 130px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px #888;
+}
 
-  .person-info {
-    flex-grow: 1;
-    text-align: left;
-    word-wrap: break-word;
-    word-break: normal;
-  }
+.person-info {
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
 
-  .person-info strong {
-    font-size: 1.1em;
-  }
+.person-info strong {
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 5px;
+}
 
-  /* 箭头 */
-  #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 56px;
-      height: 56px;
-      background: linear-gradient(to bottom right, #7ec8e3, #a0d8ef);
-      border: none;
-      border-radius: 50%;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      z-index: 999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s, background 0.3s;
-    }
+/* 回到顶部按钮 */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(to bottom right, #7ec8e3, #a0d8ef);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background 0.3s;
+}
 
-    #backToTop svg {
-      transition: transform 0.4s ease;
-    }
+#backToTop svg {
+  transition: transform 0.4s ease;
+}
 
-    #backToTop:hover {
-      background: linear-gradient(to bottom right, #55b0d9, #8ccfee);
-    }
+#backToTop:hover {
+  background: linear-gradient(to bottom right, #55b0d9, #8ccfee);
+}
 
-    #backToTop:hover svg {
-      transform: rotate(360deg);
-    }
-  
-  .footer {
-      text-align: center;
-    }
+#backToTop:hover svg {
+  transform: rotate(360deg);
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 14px;
+}
 </style>
+</head>
 
+<body>
+
+<!-- 导航栏 -->
 <nav class="navbar">
   <a href="index.html" class="nav-link">🏠Home</a>
   <a href="experience.html" class="nav-link">👩‍🎓Experience</a>
@@ -165,174 +162,121 @@
   <a href="contact.html" class="nav-link">📮Contact us</a>
 </nav>
 
-</head>
-<body>
-
+<div class="container">
 <h2>Members</h2>
+
 <h3>Academic Staff</h3>
-<table class="people-container">
-  <tbody>
-    <tr>
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/win_nie.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Weiqing Guo (Winnie)</strong><br>
-            Research Interest: Molecular representation oriented machine learning
-          </div>
-        </div>
-      </td>
-      <td class="person-cell"></td> 
-    </tr>
-  </tbody>
-</table>
-
-<h3>PhD Students</h3>
-<table class="people-container">
-  <tbody>
-    <tr>
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/Ammar.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Muhammad Ammar Khawer</strong><br>
-            Research Interest: Uncertainty Quantification, Semi-supervised Learning, Generative AI, Drug Discovery, Medical Imaging, Knowledge Distillation
-          </div>
-        </div>
-      </td>      
-      <td class="person-cell"></td> 
-    </tr>
-  </tbody>
-</table>
-
-<h3>Full Time RA</h3>
-<table class="people-container">
-  <tbody>
-    <tr>
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/RongjiKe.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Rongji Ke</strong><br>
-            Research Interest: Image inpainting, Virtual Screening
-          </div>
-        </div>
-      </td>
-      
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/lc.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Chao Liu</strong><br>
-            Research Interest: Knowledge graph embedding, Uncertainty modeling
-          </div>
-        </div>
-      </td>
-    </tr>  
-  </tbody>
-</table>
-  
-<h3>Part Time RA</h3>
-<table class="people-container">
-  <tbody>
-    <tr>
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/yuting.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Yuting Huang (Yumi)</strong><br>
-            Research Interest: Toxicity prediction of drug molecules
-          </div>
-        </div>
-      </td>
-
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/lq.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Qiang Liu</strong><br>
-            Research Interest: Time series prediction, Uncertainty modeling
-          </div>
-        </div>
-      </td>
-
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/YTZ.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Tingzhang Yang</strong><br>
-            Major: Data Science & AI
-          </div>
-        </div>
-      </td>  
-    </tr>
-
-    <tr>
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/JTH.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Tianhang Jiang</strong><br>
-            Major: Electronics and Computer Engineering
-          </div>
-        </div>
-      </td>   
-      
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/mick.png" class="person-photo">
-          <div class="person-info">
-            <strong>Guanxi Li</strong><br>
-            Research Interest: Molecular Property Prediction, Low-Data Drug Discovery, Explainable AI, Multi-Task Learning and Optimization
-          </div>
-        </div>
-      </td>
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/cjw.png" class="person-photo">
-          <div class="person-info">
-            <strong>Jiawei Chen</strong><br>
-            Research Interest: 
-          </div>
-        </div>
-      </td>
-    </tr>  
-
-    
-  </tbody>
-</table>
-
-
-<div id="footer" class="footer">
-	&copy; Debby Dan Wang | Last updated: 2025-05
+<div class="people-container">
+  <div class="person-cell">
+    <img src="./pic/win_nie.jpg" class="person-photo">
+    <div class="person-info">
+      <strong>Weiqing Guo (Winnie)</strong>
+      Research Interest: Molecular representation oriented machine learning
+    </div>
+  </div>
 </div>
 
-<button id="backToTop" title="回到顶部" aria-label="返回顶部">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M12 4L6 10H10V20H14V10H18L12 4Z" fill="white"/>
-    </svg>
-  </button>
+<h3>PhD Students</h3>
+<div class="people-container">
+  <div class="person-cell">
+    <img src="./pic/Ammar.jpg" class="person-photo">
+    <div class="person-info">
+      <strong>Muhammad Ammar Khawer</strong>
+      Research Interest: Uncertainty Quantification, Semi-supervised Learning, Generative AI, Drug Discovery, Medical Imaging, Knowledge Distillation
+    </div>
+  </div>
+</div>
 
-</body>
+<h3>Full Time RA</h3>
+<div class="people-container">
+  <div class="person-cell">
+    <img src="./pic/RongjiKe.jpg" class="person-photo">
+    <div class="person-info">
+      <strong>Rongji Ke</strong>
+      Research Interest: Image inpainting, Virtual Screening
+    </div>
+  </div>
+  <div class="person-cell">
+    <img src="./pic/lc.jpg" class="person-photo">
+    <div class="person-info">
+      <strong>Chao Liu</strong>
+      Research Interest: Knowledge graph embedding, Uncertainty modeling
+    </div>
+  </div>
+</div>
+
+<h3>Part Time RA</h3>
+<div class="people-container">
+  <div class="person-cell">
+    <img src="./pic/yuting.jpg" class="person-photo">
+    <div class="person-info">
+      <strong>Yuting Huang (Yumi)</strong>
+      Research Interest: Toxicity prediction of drug molecules
+    </div>
+  </div>
+  <div class="person-cell">
+    <img src="./pic/lq.jpg" class="person-photo">
+    <div class="person-info">
+      <strong>Qiang Liu</strong>
+      Research Interest: Time series prediction, Uncertainty modeling
+    </div>
+  </div>
+  <div class="person-cell">
+    <img src="./pic/YTZ.jpg" class="person-photo">
+    <div class="person-info">
+      <strong>Tingzhang Yang</strong>
+      Major: Data Science & AI
+    </div>
+  </div>
+  <div class="person-cell">
+    <img src="./pic/JTH.jpg" class="person-photo">
+    <div class="person-info">
+      <strong>Tianhang Jiang</strong>
+      Major: Electronics and Computer Engineering
+    </div>
+  </div>
+  <div class="person-cell">
+    <img src="./pic/mick.png" class="person-photo">
+    <div class="person-info">
+      <strong>Guanxi Li</strong>
+      Research Interest: Molecular Property Prediction, Low-Data Drug Discovery, Explainable AI, Multi-Task Learning and Optimization
+    </div>
+  </div>
+  <div class="person-cell">
+    <img src="./pic/cjw.png" class="person-photo">
+    <div class="person-info">
+      <strong>Jiawei Chen</strong>
+      Research Interest:
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 页脚 -->
+<div class="footer">
+  &copy; Debby Dan Wang | Last updated: 2025-05
+</div>
+
+<!-- 返回顶部按钮 -->
+<button id="backToTop" title="回到顶部" aria-label="返回顶部">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M12 4L6 10H10V20H14V10H18L12 4Z" fill="white"/>
+  </svg>
+</button>
 
 <script>
-    const backToTopBtn = document.getElementById("backToTop");
+const backToTopBtn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTopBtn.style.display = "flex";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
-        backToTopBtn.style.display = "flex";
-      } else {
-        backToTopBtn.style.display = "none";
-      }
-    });
-
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-
+</body>
 </html>
-
-
-
-
