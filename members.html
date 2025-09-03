@@ -75,10 +75,13 @@
       text-align: center;
     }
 
-  .people-container {
-    width: 100%;
-    border-collapse: collapse;
-  }
+.people-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 每行3列 */
+  gap: 20px; /* 每个单元格之间的间距 */
+  margin-top: 20px;
+}
+
 
   .person-cell {
     width: 50%;
@@ -86,11 +89,15 @@
     vertical-align: top;
   }
 
-  .person-box {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-  }
+.person-box {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
   .person-photo {
     width: 130px;
@@ -162,7 +169,7 @@
 <body>
 
 <h2>Members</h2>
-<h3>Academic Staff-</h3>
+<h3>Academic Staff</h3>
 <table class="people-container">
   <tbody>
     <tr>
@@ -171,7 +178,6 @@
           <img src="./pic/win_nie.jpg" class="person-photo">
           <div class="person-info">
             <strong>Weiqing Guo (Winnie)</strong><br>
-            Assistant Lecturer<br>
             Research Interest: Molecular representation oriented machine learning
           </div>
         </div>
@@ -190,7 +196,6 @@
           <img src="./pic/Ammar.jpg" class="person-photo">
           <div class="person-info">
             <strong>Muhammad Ammar Khawer</strong><br>
-            PhD<br>
             Research Interest: Uncertainty Quantification, Semi-supervised Learning, Generative AI, Drug Discovery, Medical Imaging, Knowledge Distillation
           </div>
         </div>
@@ -219,7 +224,6 @@
           <img src="./pic/lc.jpg" class="person-photo">
           <div class="person-info">
             <strong>Chao Liu</strong><br>
-            Research Assistant<br>
             Research Interest: Knowledge graph embedding, Uncertainty modeling
           </div>
         </div>
@@ -237,7 +241,6 @@
           <img src="./pic/yuting.jpg" class="person-photo">
           <div class="person-info">
             <strong>Yuting Huang (Yumi)</strong><br>
-            Research Assistant<br>
             Research Interest: Toxicity prediction of drug molecules
           </div>
         </div>
@@ -248,43 +251,38 @@
           <img src="./pic/lq.jpg" class="person-photo">
           <div class="person-info">
             <strong>Qiang Liu</strong><br>
-            Research Assistant<br>
             Research Interest: Time series prediction, Uncertainty modeling
           </div>
         </div>
       </td>
-    </tr>
 
-    <tr>
       <td class="person-cell">
         <div class="person-box">
           <img src="./pic/YTZ.jpg" class="person-photo">
           <div class="person-info">
             <strong>Tingzhang Yang</strong><br>
-            Undergraduate<br>
             Major: Data Science & AI
           </div>
         </div>
-      </td>
-      <td class="person-cell">
-        <div class="person-box">
-          <img src="./pic/JTH.jpg" class="person-photo">
-          <div class="person-info">
-            <strong>Tianhang Jiang</strong><br>
-            Undergraduate<br>
-            Major: Electronics and Computer Engineering
-          </div>
-        </div>
-      </td>   
+      </td>  
     </tr>
 
     <tr>
       <td class="person-cell">
         <div class="person-box">
+          <img src="./pic/JTH.jpg" class="person-photo">
+          <div class="person-info">
+            <strong>Tianhang Jiang</strong><br>
+            Major: Electronics and Computer Engineering
+          </div>
+        </div>
+      </td>   
+      
+      <td class="person-cell">
+        <div class="person-box">
           <img src="./pic/mick.png" class="person-photo">
           <div class="person-info">
             <strong>Guanxi Li</strong><br>
-            Research Assistant<br>
             Research Interest: Molecular Property Prediction, Low-Data Drug Discovery, Explainable AI, Multi-Task Learning and Optimization
           </div>
         </div>
@@ -294,7 +292,6 @@
           <img src="./pic/cjw.png" class="person-photo">
           <div class="person-info">
             <strong>Jiawei Chen</strong><br>
-            Research Assistant<br>
             Research Interest: 
           </div>
         </div>
@@ -335,6 +332,7 @@
   </script>
 
 </html>
+
 
 
 
